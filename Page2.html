@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Personnel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Base Style */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #000, #333); /* Noir dégradé */
+            color: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #111, #444); /* Noir subtil */
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+        header img {
+            height: 50px;
+            margin: 0 15px;
+            border-radius: 5px; /* Bords arrondis pour les logos */
+            transition: transform 0.3s ease;
+        }
+        header img:hover {
+            transform: rotate(10deg); /* Effet de rotation au survol */
+        }
+
+        /* Section Styling */
+        section {
+            background: #222; /* Noir plus clair */
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: fadeInUp 1s forwards; /* Animation de section */
+        }
+
+        section h2 {
+            background: #555;
+            color: white;
+            padding: 15px;
+            font-size: 1.6rem;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        /* Photo Styling */
+        .photo {
+            max-width: 200px; /* Photo agrandie */
+            height: 200px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            border: 4px solid #444;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            header img {
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Effets de survol */
+        .info-item:hover, .diplomes li:hover {
+            background-color: #444;
+            cursor: pointer;
+            transform: translateX(5px);
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Description Styling */
+        .description p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+            color: #ddd;
+        }
+
+        /* Accent sur les liens */
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Information Personnelle */
+        .info-item {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        /* Centrage des informations */
+        .info-item, .diplomes {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="th.jpeg" alt="Logo 1">
+        <h1>Bienvenue sur Mon Site Personnel</h1>
+        <img src="th.jpeg" alt="Logo 2">
+    </header>
+
+    <div class="container">
+        <!-- Section 1 -->
+        <section>
+            <h2>1. État Civil</h2>
+            <div class="info-item">
+                <strong>Nom:</strong> KPOKPOYA
+            </div>
+            <div class="info-item">
+                <strong>Prénoms:</strong> Rémus
+            </div>
+            <div class="info-item">
+                <strong>Contact:</strong> 57395116
+            </div>
+            <div class="info-item">
+                <strong>Photo:</strong>
+                <img src="bien.jpg" alt="Photo de Rémus" class="photo">
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section>
+            <h2>2. Mes Diplômes</h2>
+            <ul class="diplomes">
+                <li>CEP</li>
+                <li>BEPC</li>
+                <li>BAC</li>
+            </ul>
+        </section>
+
+        <!-- Section 3 -->
+        <section>
+            <h2>3. Description</h2>
+            <div class="description">
+                <p>
+                    Je m'appelle Rémus KPOKPOYA, un passionné de technologies et de développement personnel. J'aime explorer de nouveaux concepts et apprendre continuellement. Mon parcours académique m'a permis d'acquérir des compétences variées, que j'applique dans ma vie quotidienne. 
+                    En dehors de mes études, je consacre du temps à des projets personnels qui me tiennent à cœur, et j'aime collaborer avec d'autres pour réaliser des idées novatrices. 
+                    Je crois fermement que l'éducation est la clé du succès et je suis déterminé à continuer à apprendre et à grandir. 
+                    Dans mes temps libres, je m'adonne à la lecture et à la découverte de nouvelles cultures à travers les voyages.
+                    Mon objectif est de contribuer positivement à la société grâce à mes connaissances et à mon engagement.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS et Popper.js pour les animations et les composants interactifs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
